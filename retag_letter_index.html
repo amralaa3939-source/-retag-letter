@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe8f1">
+<title>إلى ريتاج 💗</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+:root{--pink:#f6a9c7;--deep:#a84d78;--ink:#68465a;--paper:#fffafd}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:'Cairo',Tahoma,sans-serif;color:var(--ink);background:radial-gradient(circle at 12% 15%,#fff 0 2px,transparent 3px),radial-gradient(circle at 86% 28%,#fff 0 2px,transparent 3px),linear-gradient(145deg,#fff4f8,#fce3ed 55%,#f8e9ff);background-size:90px 90px,120px 120px,auto}
+.float{position:fixed;opacity:.35;pointer-events:none;animation:drift 7s ease-in-out infinite;font-size:22px}
+.f1{top:8%;left:8%}.f2{top:28%;right:6%;animation-delay:1s}.f3{bottom:12%;left:12%;animation-delay:2s}.f4{bottom:24%;right:9%;animation-delay:3s}
+@keyframes drift{50%{transform:translateY(-15px) rotate(12deg)}}
+main{width:min(900px,92%);margin:0 auto;padding:42px 0 70px}
+.hero{text-align:center;padding:22px 12px 28px}
+.kicker{display:inline-block;padding:6px 16px;border:1px solid #f4c4d7;border-radius:30px;background:#ffffffa8;color:#ad6484;font-size:13px}
+h1{font-size:clamp(32px,7vw,54px);line-height:1.35;margin:18px 0 8px;color:#a94f79}
+h1 span{color:#e78bb0}
+.subtitle{margin:0;color:#9c7187;font-size:15px}
+.envelope-wrap{display:flex;justify-content:center;margin:30px auto 22px}
+.envelope{position:relative;width:210px;height:145px;border:0;background:transparent;cursor:pointer;filter:drop-shadow(0 12px 18px #c77a9b35);transition:transform .25s}
+.envelope:hover{transform:translateY(-5px)}
+.env-body{position:absolute;inset:25px 0 0;background:#f4a9c6;border-radius:8px 8px 14px 14px;overflow:hidden}
+.env-body:before,.env-body:after{content:"";position:absolute;bottom:0;width:0;height:0;border-style:solid}
+.env-body:before{left:0;border-width:0 0 120px 108px;border-color:transparent transparent #ed91b5 transparent}
+.env-body:after{right:0;border-width:0 108px 120px 0;border-color:transparent transparent #f7b9d0 transparent}
+.flap{position:absolute;z-index:2;top:25px;left:0;width:0;height:0;border-left:105px solid transparent;border-right:105px solid transparent;border-top:76px solid #f8c4d7;transform-origin:top;transition:transform .6s;filter:drop-shadow(0 3px 2px #d57d9f44)}
+.seal{position:absolute;z-index:3;top:75px;left:50%;transform:translateX(-50%);font-size:27px}
+.envelope.open .flap{transform:rotateX(180deg);z-index:0}
+.open-hint{font-size:13px;color:#a9778f;margin:0 0 26px}
+.letter{display:none;background:var(--paper);border:1px solid #f4d5e2;border-radius:24px;padding:clamp(22px,5vw,48px);box-shadow:0 18px 55px #b65e8830;position:relative;overflow:hidden}
+.letter.show{display:block;animation:appear .7s ease both}
+@keyframes appear{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.letter:before{content:"";position:absolute;inset:12px;border:1px dashed #f0bfd2;border-radius:17px;pointer-events:none}
+.letter h2{text-align:center;color:#b35d83;font-size:25px;margin:0 0 24px;position:relative}
+.message{position:relative;font-size:16px;line-height:2.15;white-space:pre-line}
+.message p{margin:0 0 18px}
+.signature{text-align:center;color:#bd6b91;font-weight:700;font-size:20px;margin:26px 0 0;position:relative}
+.actions{text-align:center;margin-top:24px}
+button.secondary{border:1px solid #e9b3c9;background:#fff4f8;color:#a45278;padding:10px 18px;border-radius:24px;font:600 14px 'Cairo',sans-serif;cursor:pointer}
+footer{text-align:center;margin-top:28px;color:#b1849a;font-size:12px}
+@media(max-width:520px){main{padding-top:24px}.message{font-size:15px;line-height:2}.letter{border-radius:18px}.letter:before{inset:8px}}
+@media print{body{background:white}.hero,.envelope-wrap,.open-hint,.actions,.float,footer{display:none!important}main{width:100%;padding:0}.letter{display:block!important;box-shadow:none;border:0}.letter:before{display:none}}
+</style>
+</head>
+<body>
+<div class="float f1">♡</div><div class="float f2">🌷</div><div class="float f3">✿</div><div class="float f4">♡</div>
+<main>
+<section class="hero">
+  <div class="kicker">رسالة صغيرة من القلب</div>
+  <h1>إلى ريتاج… <span>💗</span></h1>
+  <p class="subtitle">فيه كلام حلو مستنيكي جوّه الظرف ده</p>
+</section>
+<div class="envelope-wrap">
+  <button class="envelope" id="envelope" aria-label="افتحي الرسالة" onclick="openLetter()">
+    <div class="env-body"></div><div class="flap"></div><div class="seal">💗</div>
+  </button>
+</div>
+<p class="open-hint" id="hint" style="text-align:center">اضغطي على الظرف عشان تفتحي رسالتك 🎀</p>
+<article class="letter" id="letter">
+  <h2>إلى ريتاج… أحلى من الكلام كله 💗</h2>
+  <div class="message">
+<p>عارفة يا ريتاج؟ أنا قعدت أفكر أبدأ كلامي معاكي إزاي، وكل مرة ألاقي إن الكلام مهما كان حلو، برضه مش هيقول كل اللي جوايا ليكي. بس حبيت أكتبلك، وأسيبلك حاجة ترجعي تقريها في أي وقت، وتفتكري إن فيه حد شايفك جميلة، وغالية، ووجودك في حياته حاجة بيفرح بيها من قلبه.</p>
+<p>إنتِ حلوة أوي يا ريتاج… حلوة في ضحكتك، وفي ملامحك، وفي طريقتك، وفي التفاصيل الصغيرة اللي يمكن إنتِ نفسك مش بتاخدي بالك منها. فيه جمال كده الواحد بيشوفه ومبيعرفش يشرحه، بس بيلاقي نفسه بيبتسم، وإنتِ بالنسبالي كده. ضحكتك لوحدها تستاهل كلام كتير، وعينيكي ليهم حكاية تانية، وحضورك بيخلّي أي وقت تقضيته معاكي مختلف عن باقي اليوم. 🌷</p>
+<p>وبحبك وإنتِ على طبيعتك، من غير ما تحاولي تعملي أي حاجة عشان تعجبي حد. بحب عفويتك، وكلامك اللي بيطلع زي ما هو، وهزارك، وحتى لما تتلخبطي في حكاية وترجعي تحكيها من الأول. التفاصيل دي يمكن تعدّي عادي عندك، بس أنا بحبها عشان هي منك، وعشان بتخلّيني أعرفك أكتر وأحب وجودك أكتر.</p>
+<p>أنا مبسوط إنك في حياتي، ومش بقولها مجاملة. مبسوط إن فيه شخص زيك أقدر أستنى كلامه، وأفرح برسالته، وأحب أعرف يومه كان عامل إزاي. مجرد ما أشوف اسمك، بلاقي نفسي عايز أفتح وأشوف بتقولي إيه. ساعات بتكون كلمة صغيرة منك، بس بتفضل معايا وتخلّيني أبتسم وأنا في نص يوم عادي جدًا.</p>
+<p>وعايزك تعرفي إنك غالية عندي بكل حالاتك. وإنتِ مبسوطة وبتضحكي، وإنتِ ساكتة ومش عايزة تتكلمي، وإنتِ متضايقة ومش عارفة تعبّري، وإنتِ بتحكي بحماس عن حاجة بتحبيها. مش مستني منك تكوني طول الوقت لطيفة ومبتسمة ومفيش حاجة مزعلاكي. أنا عايز أعرفك زي ما إنتِ، وأكون جنبك في الأيام اللي محتاجة فيها حد يسمعك، زي ما بحب أكون معاكي في الأيام الحلوة. 🤍</p>
+<p>وهفضل دايمًا جنبك يا ريتاج. عايزك تلاقي فيّا حد تقدري تحكيله من غير ما ترتّبي كلامك، ومن غير ما تفكري: «هو الموضوع ده يستاهل؟» طالما شاغلك، يبقى يستاهل إني أسمعه. ولو حكيتي نفس الحاجة أكتر من مرة عشان لسه واجعاكي، هسمعك تاني. ولو مش عايزة حلول وكل اللي محتاجاه إن حد يفهم إنك متضايقة، هحاول أفهمك وأسمعك من غير ما أستعجل عليكي.</p>
+<p>ولو فيه يوم حسيتي إنك تعبانة ومش قادرة تعملي حاجة، مش هزود عليكي بكلام عن اللي المفروض تعمليه. ممكن نقعد نتكلم، ممكن نهزر شوية، وممكن نسكت. مش لازم كل لحظة يبقى فيها كلام، ولا كل زعل يتحل في نفس الساعة. ساعات كفاية إنك تعرفي إن فيه حد موجود، وأنا نفسي أكون الحد ده ليكي.</p>
+<p>مش هقولك إني هعرف دايمًا أقول الجملة الصح، بس ههتم إني أفهمك. ولو فهمتك غلط، هسمع توضيحك. ولو زعلتك، يهمني أعرف وأصلّح اللي حصل. مكانتك عندي تستاهل اهتمام حقيقي، وسؤال، ووقت، ومحاولة؛ مش مجرد كلام حلو يتقال مرة ويتنسي بعدها.</p>
+<p>وعايز أبقى جنبك كمان وإنتِ بتفرحي. تحكيلي عن حاجة نجحتي فيها، أو حلم قربتي منه، أو حتى حاجة بسيطة اشتريتيها وعجبتك. بحب فكرة إنك تبعتيلي وإنتِ متحمسة وتقولي: «بص حصل إيه!» وأفرح معاكي كأن الحكاية حصلتلي. فرحتك تهمني، ونفسي يبقى عندك منها كتير، أكتر من اللي تتوقعيه. ✨</p>
+<p>يا ريت تعرفي إنتِ جميلة قد إيه من غير ما تحتاجي تقارني نفسك بحد. مش لازم تبقي شبه أي واحدة، ولا تغيّري حاجة فيكي عشان تستحقي الإعجاب. ليكي شكلك، وروحك، وطريقتك، وضحكتك اللي تخصك إنتِ. وأنا بحب إنك ريتاج، بكل التفاصيل اللي بتخليكي الشخص اللي بستنى كلامه وبفرح بوجوده.</p>
+<p>حتى في اليوم اللي تبصي فيه لنفسك ومتبقيش راضية، أو تحسي إن شكلك مش أحسن حاجة، أتمنى تفتكري كلامي: إنتِ حلوة في الأيام العادية كمان، من غير مناسبة، ومن غير تجهيز، ومن غير صورة مظبوطة. وإنتِ بتضحكي من قلبك، وإنتِ مركزة في حاجة، وإنتِ بتحكي وتنسي كنتِ هتقولي إيه… فيه تفاصيل كتير فيكي تتحب، مش بس اللحظات اللي إنتِ شايفاها حلوة. 💗</p>
+<p>وأنا مش عايزك تحسي إنك لازم تعملي مجهود عشان تحتفظي بمكانتك عندي. مش لازم تلاقي موضوع جديد كل مرة، ولا تعتذري لو يومك كان تقيل ومقدرتيش تتكلمي. هحترم وقتك ومساحتك، وأفضل فرحان برجوعك للكلام وقت ما تكوني مرتاحة. يهمني إن وجودي في حياتك يكون مريح، وإنك لما تيجي تحكيلي تحسي إنك تقدري تاخدي نفسك وتكوني زي ما إنتِ.</p>
+<p>نفسي الأيام الجاية تكون حنينة عليكي. نفسي الحاجات اللي مستنياها تحصل وتفرحك، وتلاقي تقدير لتعبك، وتشوفي نتيجة كل محاولة عملتيها حتى لو محدش خد باله منها. ونفسي لما تحكي عن أحلامك، تحكي بحماس ومن غير خوف إن حد يقلّل منها. أنا هحب أسمعها، وأشجعك، وأفكرك بالخطوات اللي مشيتيها لما تنسي وتفتكري إنك لسه مكانك.</p>
+<p>ولو حاجة متحققتش بالشكل اللي كنتِ عايزاه، هفضل جنبك برضه. قيمتك عندي مش متعلقة بنجاح، ولا بيوم مثالي، ولا بإن كل حاجة ماشية صح. إنتِ غالية قبل أي إنجاز وبعده، وفي وقت الحماس وفي وقت التعب. ومش لازم تكون عندي طريقة أصلّح بيها كل حاجة عشان أقولك بصدق: أنا معاكي، ونفكر سوا في اللي نقدر نعمله.</p>
+<p>وأتمنى يبقى بينا أيام حلوة كتير، وحكايات نرجع نفتكرها ونضحك، وكلام يبدأ بـ«فاكرة لما…؟». وأتمنى نفضل نلاقي حاجات بسيطة تفرّحنا: رسالة في نص يوم مشغول، سؤال بجد عن الحال، هزار ييجي في وقته، وحكاية طويلة تبدأ بموضوع وتنتهي في موضوع تاني خالص. الحاجات الصغيرة دي مع الشخص الغالي بتبقى كبيرة أوي.</p>
+<p>يمكن مش بعرف أقول كل ده كل مرة، ويمكن الكلام ساعات بيبقى أقل من إحساسي، بس عايزك تبقي متأكدة من حاجة: أنا واخد بالي منك، وبقدّر وجودك، وبيهمني تكوني بخير. لما بسأل عليكي، ببقى فعلًا عايز أعرف. ولما بقولك احكيلي، ببقى عايز أسمع. ولما بقولك إنك حلوة، ببقى بقول حاجة أنا شايفها، مش جملة وخلاص.</p>
+<p>والموقع ده حبيت أعمله عشانك، عشان يبقى فيه مكان صغير كله كلام حلو ليكي. تفتحيه لما تكوني مبسوطة فيزوّد ضحكتك، أو في يوم صعب فيفكّرك إنك متقدّرة وغالية. وكل كلمة فيه تبقى رسالة مني ليكي: وجودك بيفرق معايا، وتفاصيلك بحبها، وأنا مبسوط إن الدنيا عرّفتني بيكي.</p>
+<p>خلي ضحكتك واخدة راحتها يا ريتاج، واحكيلي كتير، وكوني على طبيعتك. أنا بحب أسمعك، وبحب أشوفك مبسوطة، وهفضل جنبك في الحلو وفي الأيام اللي محتاجة صبر شوية. إنتِ حلوة أوي، وغالية أوي، وليكي عندي مكانة أكبر بكتير من اللي رسالة واحدة تقدر توصفه. 🌸💗</p>
+  </div>
+  <div class="signature">بكل الود… 💗</div>
+  <div class="actions"><button class="secondary" onclick="window.print()">احفظي الرسالة أو اطبعيها</button></div>
+</article>
+<footer>صُمّم بحب لريتاج 🎀</footer>
+</main>
+<script>
+function openLetter(){
+ const env=document.getElementById('envelope');
+ env.classList.add('open');
+ document.getElementById('letter').classList.add('show');
+ document.getElementById('hint').textContent='كل الكلام الحلو ده ليكي يا ريتاج 💗';
+ setTimeout(()=>document.getElementById('letter').scrollIntoView({behavior:'smooth',block:'start'}),250);
+}
+</script>
+</body>
+</html>
